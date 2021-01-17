@@ -1,0 +1,28 @@
+/*      These are the customs css i created for the project (not fron the template)*/
+
+
+
+
+#add-post-section {
+	display: inline-block;
+}
+
+#about-section {
+	display: none;
+}
+
+#timeline-photos-section {
+	display: none;
+}
+
+#more-section {
+	display: none;
+	
+}
+
+#friend-section {
+	display: none;
+	
+}
+
+
