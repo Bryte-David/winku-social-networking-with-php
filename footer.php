@@ -8,17 +8,18 @@
 								<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
 							</div>	
 							<p>
-								The trio took this simple idea and built it into the world’s leading carpooling platform.
+								A social Networking platform, connect with you family and friends all around the world
 							</p>
 						</div>
 						<ul class="location">
 							<li>
 								<i class="ti-map-alt"></i>
-								<p>33 new montgomery st.750 san francisco, CA USA 94105.</p>
+								<p>All around the Universe</p>
 							</li>
 							<li>
 								<i class="ti-mobile"></i>
-								<p>+1-56-346 345</p>
+								<p>+2347038367621</p>
+								<p>My whatsapp contact, you might have a project for me</p>
 							</li>
 						</ul>
 					</div>
@@ -72,16 +73,6 @@
 			</div>
 		</div>
 	</footer><!-- footer -->
-	<div class="bottombar">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
-					<i><img src="images/credit-cards.png" alt=""></i>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
 	<div class="side-panel">
 			<h4 class="panel-title">General Setting</h4>

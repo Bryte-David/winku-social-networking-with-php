@@ -1,6 +1,5 @@
 <?php 
 
-include '../connection.php';
 
 $userId = $_SESSION['uid'];
 $posted = "";

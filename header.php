@@ -2,6 +2,7 @@
 include 'config.php';
 include 'connection.php';
 
+
 session_start();
 
 $route =  base_url."auth.php";
@@ -11,8 +12,26 @@ if(isset($_SESSION['uid'])) {
   }else{
     header("location: $route");
   }
-// print_r($_SESSION['uid']);
- ?>
+
+// fetching the user details
+$userId = $_SESSION['uid'];
+
+$query = "SELECT * FROM users WHERE id = '$userId' ";
+$sql = mysqli_query($con, $query);
+$result = mysqli_fetch_assoc($sql);
+$name = ucwords($result['name']);
+$username = ucwords($result['username']);
+$email = $result['email'];
+$phone = $result['phone'];
+$dob = $result['dob'];
+$gender = $result['gender'];
+$city = $result['city'];
+$country = $result['country'];
+$about_me = $result['about_me'];
+$profile_pic = $result['profile_pic'];
+$cover_pic = $result['cover_pic'];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +61,7 @@ if(isset($_SESSION['uid'])) {
                 <a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
             </span>
             <span class="mh-text">
-                <a href="newsfeed.html" title=""><img src="images/logo2.png" alt=""></a>
+                <a href="<?php echo base_url ?>" title=""><img src="images/logo2.png" alt=""></a>
             </span>
             <span class="mh-btns-right">
                 <a class="fa fa-sliders" href="#shoppingbag"></a>
@@ -162,7 +181,7 @@ if(isset($_SESSION['uid'])) {
     </div><!-- responsive header -->
         <div class="topbar stick">
         <div class="logo">
-            <a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
+            <a title="" href="<?php echo base_url ?>"><img src="images/logo.png" alt=""></a>
         </div>
         
         <div class="top-area">
@@ -199,7 +218,7 @@ if(isset($_SESSION['uid'])) {
                         </form>
                     </div>
                 </li>
-                <li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
+                <li><a href="<?php echo base_url ?>" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
                 <li>
                     <a href="#" title="Notification" data-ripple="">
                         <i class="ti-bell"></i><span>20</span>
@@ -340,7 +359,7 @@ if(isset($_SESSION['uid'])) {
                 </li>
             </ul>
             <div class="user-img">
-                <img src="images/resources/admin.jpg" alt="">
+                <img style="width: 60px; height: 60px" src="<?php echo base_url ?>uploads/displaypics/<?php echo $profile_pic ?>" alt="">
                 <span class="status f-online"></span>
                 <div class="user-setting">
                     <a href="#" title=""><span class="status f-online"></span>online</a>

@@ -16,48 +16,6 @@ document.getElementById('postbtn').onclick = function post() {
 }
 
 
-function showCp(){
-	var ajax = new XMLHttpRequest();
-	ajax.open("GET", "../utils/getProfilePic.php?pic=cp");
-	ajax.onreadystatechange == function(){
-		if (this.readyState == 4 && this.status == 200) {
-			let response = this.responseText;
-			console.log(response);
-		}
-	}
-	ajax.send();
-}
-
-// var updatebtn = document.getElementById('update-btn');
-// updatebtn.addEventListener('click', updateDetails);
-
-// function updateDetails(){
-// 	var ajax = new XMLHttpRequest();
-// 	ajax.open("POST", "../utils/update-profile.php");
-// 	ajax.onreadystatechange = function (event) {
-// 	if (event.target.readyState == 4 && event.target.status == 200) {
-//             let response = event.target.responseText;
-//             console.log(response);
-//         }
-// 	}
-// 	ajax.send();
-// }
-
-// document.getElementById("showphotos").onclick = function showPhotos(){
-// 	let photos = document.getElementById('timeline-photos-section');
-// 	let ajax = new XMLHttpRequest();
-// 	console.log(ajax);
-// 	ajax.open("GET", "../utils/navigate.php/?req=photos");
-// 	ajax.onreadystatechange = function(){
-// 		if (this.readyState == 4 && this.status == 200) {
-// 			let response = this.responseText;
-// 			document.getElementById("page").innerHTML = response;
-// 			console.log(response);
-// 		}
-// 	}
-// 	ajax.send();
-// }
-
 
 document.getElementById("showtimeline").onclick = function showTimeline(){
 	//use ajax and file get content instead of this
@@ -106,7 +64,7 @@ document.getElementById("showmore").onclick = function showMore(){
 
 
 
-window.onload = () =>{
-	showTimeline();
-}
+// window.onload = () =>{
+// 	showTimeline();
+// }
 

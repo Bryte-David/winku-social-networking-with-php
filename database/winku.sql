@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2021 at 02:48 AM
+-- Generation Time: Jan 17, 2021 at 06:54 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -39,7 +39,8 @@ CREATE TABLE `friends_list` (
 
 INSERT INTO `friends_list` (`id`, `user_id`, `friends_id`) VALUES
 (4, 1, 15),
-(5, 1, 150);
+(5, 1, 150),
+(6, 1, 16);
 
 -- --------------------------------------------------------
 
@@ -75,7 +76,11 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `userId`, `content`, `image`, `video`, `date_posted`) VALUES
-(2, 1, '', 'posts6002f5df2110b.png', '', 'Sat-Jan-2021 03:19pm');
+(2, 1, '', 'posts6002f5df2110b.png', '', 'Sat-Jan-2021 03:19pm'),
+(3, 15, 'hey hey', '', '', 'Sun-Jan-2021 05:35pm'),
+(4, 1, 'i', '', '', 'Sun-Jan-2021 06:33pm'),
+(5, 1, 'ki', '', '', 'Sun-Jan-2021 06:34pm'),
+(6, 15, 'keeeeeeee', '', '', 'Sun-Jan-2021 06:35pm');
 
 -- --------------------------------------------------------
 
@@ -105,7 +110,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `email`, `username`, `phone`, `dob`, `gender`, `city`, `country`, `about_me`, `date_created`, `profile_pic`, `cover_pic`) VALUES
-(1, 'Lisa Peter', '12345', 'lisa@mail.com', 'Lisa', '7038367621', '2021-01-14', 'Female', 'Benin city', 'ALA', 'i am a good girl', 'Friday 08-01-21', 'dp6002da8ae318e.png', 'cp6002da9aa30ac.png'),
+(1, 'Lisa Peter', '12345', 'lisa@mail.com', 'Lisa', '7038367621', '2021-01-14', 'Female', 'Benin city', 'ALA', 'i am a good girl', 'Friday 08-01-21', 'dp60046a03c37ff.png', 'cp6002da9aa30ac.png'),
 (15, 'June Mark', '12345', 'june@mail.com', 'Junemark01', '1234567890', '1995-02-12', 'Female', 'fort lore', 'USA', 'Fun to be with', 'Tuesday 12-01-21', 'Profile.jpg', 'default-cp.jpg'),
 (16, 'jack rowland', '12345', 'jack@mail.com', 'Jacky01', '1234567890', '1998-02-12', 'Female', 'fort lore', 'USA', 'Fun to be with', 'Tuesday 12-01-21', 'Profile.jpg', 'default-cp.jpg');
 
@@ -145,19 +150,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `friends_list`
 --
 ALTER TABLE `friends_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `friend_requests`
 --
 ALTER TABLE `friend_requests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`

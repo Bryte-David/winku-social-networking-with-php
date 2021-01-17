@@ -2,7 +2,7 @@
 								<div class="central-meta">
 									<div class="frnds">
 										<ul class="nav nav-tabs">
-											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">My Friends</a> <span>55</span></li>
+											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">Friends</a> <span>55</span></li>
 											 <?php 
 											 	if (!isset($_GET['pepl'])) {
 											 		

@@ -1,5 +1,6 @@
 <?php 
 include '../header.php';
+include '../connection.php';
 include '../utils/update-profile.php';
 include '../utils/update-photo.php';
 include '../utils/publish-post.php';
@@ -106,6 +107,11 @@ if (isset($_GET['pepl'])) {
 					 
 
 			</div>
+<?php 
+	if (!isset($_GET['pepl'])) {
+	
+	
+ ?>
 			<form class="edit-phto" method="POST" enctype="multipart/form-data">
 				<i class="fa fa-camera-retro"></i>
 				<label class="fileContainer">
@@ -115,12 +121,16 @@ if (isset($_GET['pepl'])) {
 				<button type="submit" name="cp" class="">upload</button>
 				</label>
 			</form>
+<?php } ?>
 			<div class="container-fluid">
 				<div class="row merged">
 					<div class="col-lg-2 col-sm-3">
 						<div class="user-avatar">
 							<figure id="fig-dp">
 								<img style="width: 195px; height: 182px" src="<?php echo base_url ?>uploads/displaypics/<?php echo $profile_pic; ?>" alt="">
+<?php 
+	if (!isset($_GET['pepl'])) {
+ ?>
 								<form class="edit-phto" method="POST" enctype="multipart/form-data">
 									<i class="fa fa-camera-retro"></i>
 									<label class="fileContainer">
@@ -130,6 +140,7 @@ if (isset($_GET['pepl'])) {
 										<button type="submit" name="dp" class="">upload</button>
 									</label>
 								</form>
+<?php } ?>
 							</figure>
 						</div>
 					</div>
@@ -195,6 +206,62 @@ if (isset($_GET['pepl'])) {
 			</div>
 		</div>	
 	</section>
+
+	<script type="text/javascript">
+		var aboutSection = document.getElementById('about-section');
+var addPostSection = document.getElementById('add-post-section');
+var timelinePhotosSection = document.getElementById('timeline-photos-section');
+var timelineMoreSection = document.getElementById('more-section');
+var timelineFriendsSection = document.getElementById('friend-section');
+
+document.getElementById("showtimeline").onclick = function showTimeline(){
+	//use ajax and file get content instead of this
+	addPostSection.style.display = "block";
+	aboutSection.style.display = "none";
+	timelinePhotosSection.style.display = "none";
+	timelineMoreSection.style.display = "none";
+	timelineFriendsSection.style.display = "none";
+}
+
+document.getElementById("showphotos").onclick = function showPhotos(){
+	timelinePhotosSection.style.display = "block";
+	addPostSection.style.display = "none";
+	aboutSection.style.display = "none";
+	timelineMoreSection.style.display = "none";
+	timelineFriendsSection.style.display = "none";
+}
+
+document.getElementById("showabout").onclick =  function showAbout(){
+	aboutSection.style.display = "block";
+	timelinePhotosSection.style.display = "none";
+	addPostSection.style.display = "none";
+	timelineMoreSection.style.display = "none";
+	timelineFriendsSection.style.display = "none";
+}
+
+document.getElementById("showfriends").onclick =  function showFriends(){
+	timelineFriendsSection.style.display = "block";
+	aboutSection.style.display = "none";
+	timelinePhotosSection.style.display = "none";
+	addPostSection.style.display = "none";
+	timelineMoreSection.style.display = "none";
+}
+
+document.getElementById("showvideos").onclick = function showVideos() {
+	alert("videos")
+}
+
+document.getElementById("showmore").onclick = function showMore(){
+	timelineMoreSection.style.display = "block";
+	aboutSection.style.display = "none";
+	timelinePhotosSection.style.display = "none";
+	addPostSection.style.display = "none";
+	timelineFriendsSection.style.display = "none";
+}
+
+
+
+	</script>
 
 
 
